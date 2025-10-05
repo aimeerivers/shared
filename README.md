@@ -32,6 +32,10 @@ on:
 
 jobs:
   docker-build-publish:
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
     uses: aimeerivers/shared/.github/workflows/docker-build-publish.yml@main
     with:
       service_name: your-service-name
